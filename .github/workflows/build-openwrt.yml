@@ -15,7 +15,7 @@
 #
 #
 
-name: build config file
+name: 创建config文件
 on:
   workflow_dispatch:
     inputs:
