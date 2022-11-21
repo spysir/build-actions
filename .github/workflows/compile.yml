@@ -231,9 +231,9 @@ jobs:
      
      
     - name: Gotify push
-      continue-on-error: true
-      if: steps.compile.outcome == 'success'
       uses: spysir/gotify-action@master
+      if: steps.compile.outcome == 'success'
+      
       with:
         gotify_api_base: '${{ secrets.GOTIFY_API_BASE }}'
         gotify_app_token: '${{ secrets.GOTIFY_APP_TOKEN }}'
