@@ -9,7 +9,7 @@
 #
 
 
-name: compile
+name: compile openwrt
 on:
   workflow_dispatch:
   push:
