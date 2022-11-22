@@ -233,7 +233,6 @@ jobs:
     - name: Gotify push
       uses: spysir/gotify-action@master
       if: steps.compile.outcome == 'success'
-      
       with:
         gotify_api_base: '${{ secrets.GOTIFY_API_BASE }}'
         gotify_app_token: '${{ secrets.GOTIFY_APP_TOKEN }}'
@@ -241,4 +240,5 @@ jobs:
         notification_message: |
                             ${{matrix.target}} 固件编译成功啦!
                             https://github.com/spysir/build-actions
+      
       
