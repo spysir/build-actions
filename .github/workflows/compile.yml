@@ -204,12 +204,12 @@ jobs:
 
     - name: Gotify push
       continue-on-error: true
-      uses: spysir/gotify-action@master
       if: steps.regular.outcome == 'success'
+      uses: cstuder/apprise-ga@master
       with:
-        gotify_api_base: '${{ secrets.GOTIFY_API_BASE }}'
-        gotify_app_token: '${{ secrets.GOTIFY_APP_TOKEN }}'
-        notification_title: 'Github Actions'
-        notification_message: |
-                            ${{matrix.target}} 固件编译成功啦!
-                            https://github.com/spysir/build-actions
+        title: "固件编译成功"
+        message: |
+                ${{matrix.target}} 固件编译成功啦!
+                https://github.com/spysir/build-actions
+      env:
+        APPRISE_URL: ${{ secrets.APPRISE_URL }}
