@@ -15,7 +15,7 @@
 #
 #
 
-name: 创建config文件
+name: 触发compile启动编译
 on:
   workflow_dispatch:
     inputs:
