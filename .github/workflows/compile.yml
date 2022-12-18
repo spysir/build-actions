@@ -203,8 +203,9 @@ jobs:
         artifacts: "Github_Tags/*"
 
     - name: Gotify push
+      continue-on-error: true
       uses: spysir/gotify-action@master
-      if: steps.organizer.outputs.status == 'success'
+      if: steps.regular.outcome == 'success'
       with:
         gotify_api_base: '${{ secrets.GOTIFY_API_BASE }}'
         gotify_app_token: '${{ secrets.GOTIFY_APP_TOKEN }}'
