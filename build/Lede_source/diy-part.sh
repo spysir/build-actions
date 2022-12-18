@@ -7,7 +7,7 @@
 
 git clone https://github.com/spysir/luci-app-pushbot package/luci-app-pushbot
 git clone https://github.com/spysir/luci-app-tcpdump.git package/luci-app-tcpdump
-
+git clone https://github.com/spysir/luci-app-autotimeset.git package/luci-app-autotimeset
 
 
 
