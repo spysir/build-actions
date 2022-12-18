@@ -202,7 +202,7 @@ jobs:
         bodyFile: "AutoUpdate_log.txt"
         artifacts: "Github_Tags/*"
 
-    - name: Gotify push
+    - name: Apprise-Gotify push
       continue-on-error: true
       if: steps.regular.outcome == 'success'
       uses: cstuder/apprise-ga@master
